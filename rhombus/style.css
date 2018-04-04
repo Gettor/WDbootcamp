@@ -28,6 +28,23 @@
     border-bottom: 20px solid transparent;
   }
 
+  .pinch {
+    margin-left: 40px;
+  }
+
+  .flipped {
+    transform: scaleX(-1);
+  }
+
+ .flipped:after {
+    right: -20px;
+    border-left: 0px;
+    border-right: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    transform: scaleX(-1);
+  }
+
   .pointer:nth-of-type(2):before {
     border-left: 20px solid blue;
   }
