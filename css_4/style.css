@@ -1,0 +1,33 @@
+body {
+	max-width: 700px;
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+	border: 20px solid #C4C4C4FF;
+}
+
+h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 800;
+	font-size: 36px;
+	text-transform: capitalize;
+}
+
+.date {
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #21A2DDFF;
+	font-weight: 800;
+}
+
+.special_font {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 800;
+	line-height: 1.4;
+}
+
+.highlight {
+	border-left: 5px solid #D1D1D1FF;
+	padding-left: 5px;
+}

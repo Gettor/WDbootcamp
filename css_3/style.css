@@ -1,0 +1,16 @@
+img {
+	width: 30%;
+	float: left;
+	margin: 1.66%;
+}
+
+p {
+	width: 30%;
+	font-family: 'Jua', sans-serif;
+	margin-left: 1.66%;
+	font-size: 23px;
+	font-weight: 800;
+	text-transform: uppercase;
+	border-bottom: 1px solid #DBDBDBFF;
+	padding-bottom: 20px;
+}
