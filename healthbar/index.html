@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Healthbar demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td class="right">
+			<div class="health">
+				<p class="healthText">40/40</p>
+				<div class="healthbar">
+					<div class="bar" maxValue=1000 curValue=1000>
+					</div>
+				</div>
+			</div>
+		</td>
+		<td class="left">
+			<div class="health">
+				<p class="healthText">40/40</p>
+				<div class="healthbar">
+					<div class="bar reverse" maxValue=1000 curValue=1000>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="right"></td>
+		<td class="left"></td>
+	</tr>
+	<tr>
+		<td class="right">
+			<button class="Hit" onclick="onHit(0)">Hit</button>
+			<button class="Reset" onclick="onReset(0)">Reset</button>
+		</td>
+		<td class="left">
+			<button class="Hit" onclick="onHit(1)">Hit</button>
+			<button class="Reset" onclick="onReset(1)">Reset</button>
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>

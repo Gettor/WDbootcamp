@@ -1,0 +1,56 @@
+table {
+	margin: auto;
+}
+
+td {
+	width: 200px;
+	height: 200px;
+	background-color: #A65887FF;
+}
+
+td.right {
+	border-right: 10px solid #BABABAFF;
+}
+
+td.left {
+	border-left: 10px solid #BABABAFF;
+}
+
+p.healthText {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.health {
+	background-color: #F2F2F2FF;
+	width: 200px;
+	height: 50px;
+	position: relative;
+}
+
+.healthbar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	position: relative;
+	background-color: #D8D8D8FF;
+	width: 200px;
+	height: 20px;
+	bottom: -10px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.bar {
+	position: absolute;
+	background-color: #3EC072FF;
+	width: 190px;
+	height: 10px;
+	transition: width .5s linear;
+}
+
+.reverse {
+	top: 5px;
+	right: 5px;
+}
