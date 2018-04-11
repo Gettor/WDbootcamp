@@ -1,0 +1,32 @@
+body {
+	background-color: #FFEEADFF;
+	margin: 10px;
+}
+
+.container > div {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+div > div:nth-child(even) {
+	background-color: #E17B95FF;
+}
+
+div > div:nth-child(odd) {
+	background-color: #74DFFFFF;
+}
+
+div > div:nth-child(4) {
+	background-color: #DBE670FF;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 100px auto 100px;
+	grid-template-rows: 50px 50px;
+	grid-gap: 3px;
+}
