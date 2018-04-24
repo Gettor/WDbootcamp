@@ -14,6 +14,7 @@ html{
 }
 
 body {
+	font-family: 'Black Han Sans', sans-serif;
 	background-color: #3d3d3d;
 }
 
@@ -30,8 +31,18 @@ body {
 	margin: 0;
 }
 
+#first-nav {
+	margin-left: 20%;
+}
+
+#second-nav {
+	margin-right: 20%;
+}
+
 .navbar-button {
+	font-size: 2em;
 	background-color: #f2f2f2;
+	color: #23aeff;
 	border-radius: 0;
 }
 
@@ -45,6 +56,31 @@ body {
 	margin: 0;
 }
 
-.jumbotron h1 {
+.jumbotron h2, .jumbotron h1 {
 	text-align: center;
+}
+
+h1 {
+	font-size: 5em;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+.color-container {
+	display: grid;
+	margin: auto;
+	padding: 30px;
+	width: 900px;
+	height: 600px;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
+	grid-column-gap: 5%;
+  	grid-row-gap: 5%;
+}
+
+.geuess-color {
+	background-color: pink;
+	border-radius: 5em;
 }
