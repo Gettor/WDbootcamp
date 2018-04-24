@@ -16,7 +16,14 @@ function assignColor(div, red, green, blue) {
 }
 
 function randomizeColors() {
-	winningDiv = Math.floor((Math.random() * 6));
+	if (!isEasyMode())
+	{
+		winningDiv = Math.floor((Math.random() * 6));
+	}
+	else
+	{
+		winningDiv = Math.floor((Math.random() * 3));
+	}
 	divs.forEach(function(val, i){
 		var red = Math.floor((Math.random() * 256));
 		var green = Math.floor((Math.random() * 256));
@@ -74,8 +81,28 @@ function reset() {
 }
 
 function toggleNavbarButtons() {
-	easyButton.classList.toggle("active");
-	hardButton.classList.toggle("active");
+	if (isEasyMode())
+	{
+		easyButton.classList.remove("active");
+		hardButton.classList.add("active");
+	}
+	else
+	{
+		easyButton.classList.add("active");
+		hardButton.classList.remove("active");
+	}
+}
+
+function disableColorsForEasyMode() {
+	for (var i = 3; i < 6; i++)
+	{
+		divs[i].style.backgroundColor = "";
+		divs[i].classList.add("disabled-color");
+	}
+}
+
+function isEasyMode() {
+	return easyButton.classList.contains("active");
 }
 
 divs.forEach(function(div){
@@ -89,14 +116,14 @@ divs.forEach(function(div){
 
 resetButton.addEventListener("click", function(){
 	reset();
+	if (isEasyMode()) {
+		disableColorsForEasyMode();
+	}
 });
 
 easyButton.addEventListener("click", function(){
 	reset();
-	for (var i = 3; i < 6; i++)
-	{
-		divs[i].classList.add("disabled-color");
-	}
+	disableColorsForEasyMode();
 	toggleNavbarButtons();
 });
 
