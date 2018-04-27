@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 2rem;
+	background: linear-gradient(90deg, #e66465, #9198e5);
+}
+
+table {
+	margin: 0 auto;
+	margin-top: 150px;
+	width: 600px;
+}
+
+input {
+	width: 100%;
+	outline: none;
+	box-shadow: none;
+	border-color: inherit;
+	border: none;
+	padding: 5px;
+	padding-left: 10px;
+	background-color: #F2F2F2FF;
+	border: 3px solid #F2F2F2FF;
+}
+
+input::placeholder {
+	color: #A8A8A8FF;
+}
+
+input:focus {
+	border: 3px solid #A3EAFFFF;
+}
+
+#add-item {
+	float: right;
+	vertical-align: middle;
+	font-size: 1.5em;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+th {
+	font-size: 3rem;
+	background-color: #A3EAFFFF;
+}
+
+#to-do-header {
+	padding-left: 10px;
+}
+
+tr:nth-of-type(even) {
+	background-color: #C9C9C9FF;
+}
+
+tr:nth-of-type(odd) {
+	background-color: #F2F2F2FF;
+}
+
+tbody span {
+	margin-left: 15px;
+}
+
+.td-trash {
+	background-color: #FF3132FF;
+	display: none;
+	height: 100%;
+	vertical-align: middle;
+	padding: 0 15px;
+	font-size: 1.5em;
+	cursor: pointer;
+	/*margin-right: 15px;*/
+}
