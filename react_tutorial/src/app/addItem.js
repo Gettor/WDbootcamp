@@ -12,7 +12,7 @@ var AddItem = createReactClass({
                 <input type="text" name="input" onKeyPress={this.handleAdd} placeholder="Enter new todo" ref="addItemInputRef" />
             </span>
         );
-    },//
+    },
 
     //Custom functions
     handleAdd: function(e){
