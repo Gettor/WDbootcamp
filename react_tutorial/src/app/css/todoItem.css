@@ -11,6 +11,7 @@
 .item-name{
   flex-basis: 0;
   flex-grow: 9;
+  font-size: 1.5rem;
 }
 
 .item-remove{
