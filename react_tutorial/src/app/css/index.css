@@ -33,6 +33,12 @@ body{
 }
 
 #todo-list ul{
-  list-style-type: none;
   padding: 0;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: none;
+  line-height: 2;
+  font-size: 1.5rem;
 }

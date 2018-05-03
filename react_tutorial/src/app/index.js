@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 //Module requires
 var TodoItem = require('./todoItem');
@@ -16,6 +16,11 @@ var App = createReactClass({
         return(
             <Router>
                 <div>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                     </ul>
+                     <hr/>
                     <Route exact path={'/'} component={TodoComponent}></Route>
                     <Route exact path={'/about'} component={About}></Route>
                 </div>
