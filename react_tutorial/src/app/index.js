@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var createReactClass = require('create-react-class');
 
 //Module requires
 var TodoItem = require('./todoItem');
@@ -8,7 +9,7 @@ var TodoItem = require('./todoItem');
 require('./css/index.css');
 
 //Create a component
-var TodoComponent = React.createClass({
+var TodoComponent = createReactClass({
     getInitialState: function(){
         return {
             todos: ['wash up', 'eat some cheese', 'take a nap']

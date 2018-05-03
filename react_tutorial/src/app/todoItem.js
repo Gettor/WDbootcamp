@@ -1,10 +1,11 @@
 var React = require('react');
+var createReactClass = require('create-react-class');
 
 //CSS requires
 require('./css/todoItem.css');
 
 //Create TodoItem component
-var TodoItem = React.createClass({
+var TodoItem = createReactClass({
     render: function(){
         return(
             <li>

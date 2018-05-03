@@ -9,19 +9,21 @@ module.exports = {
         publicPath: '/app/'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
+                use : {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['babel-preset-react', 'babel-preset-es2015']
+                    }
                 }
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: [ 'style-loader', 'css-loader' ]
             }
-        ]
+        ],
     }
 };
