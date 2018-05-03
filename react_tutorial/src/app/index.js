@@ -50,4 +50,4 @@ var TodoComponent = createReactClass({
     }
 });
 
-ReactDOM.render(<TodoComponent />, document.getElementById('todo-wrapper'));
+ReactDOM.render(<TodoComponent />, document.querySelector('#todo-wrapper'));
