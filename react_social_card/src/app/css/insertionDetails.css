@@ -1,0 +1,13 @@
+.icon-image {
+	width: 100px;
+	border-radius: 50px;
+}
+
+span {
+	display: inline-block;
+	padding-left: 20px;
+}
+
+p {
+	font-size: 2em;
+}

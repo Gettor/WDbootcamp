@@ -2,10 +2,22 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var createReactClass = require('create-react-class');
 
+require('./css/index.css');
+
+//Module requires
+var InsertionDetails = require('./insertionDetails');
+var CardImage = require('./cardImage');
+var CardText = require('./cardText');
+
+
 var SocialComponent = createReactClass({
 	render: function(){
 		return(
-				<h1>It works, for now!</h1>
+				<div className="social-card">
+					<InsertionDetails />
+					<CardImage />
+					<CardText />
+				</div>
 			);
 	}, // render
 });
