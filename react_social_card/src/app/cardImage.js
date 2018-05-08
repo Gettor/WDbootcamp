@@ -7,7 +7,7 @@ var CardImage = createReactClass({
 	render: function(){
 		return(
 			<span>
-				<img className="center-image" src="/app/images/superman.png" />
+				<img className="center-image" src={this.props.imagePath} />
 			</span>
 		);
 	}
