@@ -80,8 +80,8 @@ function reset() {
 	});
 }
 
-function toggleNavbarButtons() {
-	if (isEasyMode())
+function toggleNavbarButtons(shouldSwidthToHardMode) {
+	if (shouldSwidthToHardMode)
 	{
 		easyButton.classList.remove("active");
 		hardButton.classList.add("active");
@@ -124,12 +124,12 @@ resetButton.addEventListener("click", function(){
 easyButton.addEventListener("click", function(){
 	reset();
 	disableColorsForEasyMode();
-	toggleNavbarButtons();
+	toggleNavbarButtons(0);
 });
 
 hardButton.addEventListener("click", function(){
 	reset();
-	toggleNavbarButtons();
+	toggleNavbarButtons(1);
 });
 
 randomizeColors();
