@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #999;
+}
+
+div {
+	background: white;
+	width: 500px;
+	height: 300px;
+	margin: 50px auto 0;
+	border-style: solid;
+	border-width: 20px 22px 22px;
+	-moz-border-image: url(border.png) 20 22 22 repeat;
+	-webkit-border-image: url(border.png) 20 22 22 repeat;
+	-o-border-image: url(border.png) 20 22 22 repeat;
+	border-image: url(border.png) 20 22 22 repeat
+}
