@@ -9,14 +9,11 @@ var InsertionDetails = require('./insertionDetails');
 var CardImage = require('./cardImage');
 var CardText = require('./cardText');
 
-// const shortTextLength = 50;
-
-function getDayFromDate(date){
-    if (date < 10)
-    {
-        return "0" + date;
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
     }
-    return date;
+    return i;
 }
 
 function getShortYear(year){
@@ -37,7 +34,7 @@ var SocialComponent = createReactClass({
 
     render: function(){
         var d = this.state.curDate;
-        var dateFormat = getDayFromDate(d.getDate()) + "." + getDayFromDate(d.getMonth()) + "." + getShortYear(d.getFullYear()) + " " + d.getHours() + ":" + d.getMinutes();
+        var dateFormat = addZero(d.getDate()) + "." + addZero(d.getMonth()+1) + "." + getShortYear(d.getFullYear()) + " " + addZero(d.getHours()) + ":" + addZero(d.getMinutes());
         return(
             <div className="social-card">
                 <InsertionDetails iconPath={this.state.iconPath} customDate={dateFormat} name={this.state.name}/>
