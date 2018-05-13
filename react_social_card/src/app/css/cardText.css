@@ -3,11 +3,15 @@ p {
 	transition: all 1s;
 }
 
-span {
-	transition: all 1s;
+.card-text-start {
+	display: inline;
 }
 
 .card-text-hidden {
-	opacity: 0;
 	display: none;
+}
+
+.text-toggle {
+	color: blue;
+	cursor: pointer;
 }

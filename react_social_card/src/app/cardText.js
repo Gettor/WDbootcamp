@@ -9,10 +9,18 @@ const toggleShow = [
 ];
 const shortTextLength = 50;
 
-function shortify(text){
+function getShortText(text){
     if (text.length > shortTextLength)
     {
         return text.slice(0, shortTextLength);
+    }
+    return text;
+}
+
+function getRestOfText(text){
+	if (text.length > shortTextLength)
+    {
+        return text.slice(shortTextLength, text.length);
     }
     return text;
 }
@@ -30,14 +38,17 @@ var CardImage = createReactClass({
         return {
             toggleShow: toggleShow[0],
             shortText: "",
+            textAddition: "",
             fullText: this.props.text
         }
     }, //getInitialState
 
     componentWillMount: function(){
-        var shortText = shortify(this.state.fullText);
+        var shortText = getShortText(this.state.fullText);
+        var restOfText = getRestOfText(this.state.fullText);
         this.setState({
-            shortText: shortText
+            shortText: shortText,
+            textAddition: restOfText
         });
     }, //componentWillMount
 
@@ -45,8 +56,9 @@ var CardImage = createReactClass({
         return(
             <span>
                 <p>
-                    <span className="card-text-hidden" ref="cardTextFull">{this.state.fullText} </span>
-                    <span ref="cardTextShort">{this.state.shortText} </span>
+                	<span id="shortText" className="card-text-start">{this.state.shortText} </span>
+                    <span id="fullText" className="card-text-hidden">{this.state.textAddition} </span>
+                    <br/>
                     <span className="text-toggle" onClick={this.onTextToggle}> {this.state.toggleShow} </span>
                 </p>
             </span>
@@ -55,11 +67,8 @@ var CardImage = createReactClass({
 
     //Custom functions
     onTextToggle: function(){
-        var fullText = this.refs.cardTextFull;
-        var shortText = this.refs.cardTextShort;
         var newState = toggle(this.state.toggleShow);
-        fullText.classList.toggle("card-text-hidden");
-        shortText.classList.toggle("card-text-hidden");
+        $("#fullText").fadeToggle("fast");
         this.setState({
             toggleShow: newState
         });
