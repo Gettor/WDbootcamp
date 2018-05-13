@@ -1,6 +1,5 @@
-p {
+.text-area span {
 	font-size: 1.4rem;
-	transition: all 1s;
 }
 
 .card-text-start {

@@ -22,7 +22,7 @@ function getRestOfText(text){
     {
         return text.slice(shortTextLength, text.length);
     }
-    return text;
+    return "";
 }
 
 function toggle(currentState){
@@ -55,7 +55,7 @@ var CardImage = createReactClass({
     render: function(){
         return(
             <span>
-                <p>
+                <p className="text-area">
                 	<span id="shortText" className="card-text-start">{this.state.shortText} </span>
                     <span id="fullText" className="card-text-hidden">{this.state.textAddition} </span>
                     <br/>

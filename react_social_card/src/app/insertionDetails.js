@@ -8,7 +8,7 @@ var InsertionDetails = createReactClass({
 		return(
 			<div>
 				<img className="icon-image" src={this.props.iconPath} />
-				<span>
+				<span className="insertion-name">
 					<p>{this.props.name}</p>
 					<p>{this.props.customDate}</p>
 				</span>
