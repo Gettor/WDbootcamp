@@ -1,0 +1,13 @@
+p {
+	font-size: 1.4rem;
+	transition: all 1s;
+}
+
+span {
+	transition: all 1s;
+}
+
+.card-text-hidden {
+	opacity: 0;
+	display: none;
+}
